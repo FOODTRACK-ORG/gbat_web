@@ -94,11 +94,32 @@
   .rv{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
   .rv.in{opacity:1;transform:none}
   @media(max-width:640px){.wrap{padding:0 22px}header .wrap{height:70px}.logo img{height:36px}.contact-btn{padding:10px 16px;font-size:13px}.sec{padding:76px 0}.fgrid{grid-template-columns:1fr}}
+
+  /* Mobile nav */
+  .nav-toggle{display:none}
+  .nav-burger{display:none;flex-direction:column;justify-content:center;gap:5px;width:30px;height:30px;cursor:pointer;flex-shrink:0}
+  .nav-burger span{display:block;width:100%;height:2px;background:var(--ink);border-radius:2px;transition:.25s}
+  @media(max-width:1000px){
+    .nav-burger{display:flex}
+    header .wrap{position:relative}
+    nav{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:0;background:#fff;padding:8px 32px 26px;border-top:1px solid var(--line);box-shadow:0 20px 40px -24px rgba(14,26,58,.3);max-height:calc(100vh - 70px);overflow-y:auto}
+    #navToggle:checked ~ nav{display:flex}
+    nav .dd{width:100%;border-bottom:1px solid var(--line)}
+    nav .dd:last-child{border-bottom:none}
+    nav a.top,nav .dd .top{width:100%;padding:16px 0;font-weight:500}
+    nav .top svg{transform:rotate(-90deg)}
+    .dd-menu{position:static;opacity:1;visibility:visible;transform:none;box-shadow:none;border:none;min-width:0;padding:0 0 14px 6px}
+    .dd-menu a{padding:8px 6px;font-size:14.5px}
+    #navToggle:checked ~ .hdr-right .nav-burger span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+    #navToggle:checked ~ .hdr-right .nav-burger span:nth-child(2){opacity:0}
+    #navToggle:checked ~ .hdr-right .nav-burger span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+  }
 </style>
 </head>
 <body>
 <header id="hdr">
   <div class="wrap">
+    <input type="checkbox" id="navToggle" class="nav-toggle">
     <a href="index.html" class="logo"><img src="https://images.squarespace-cdn.com/content/v1/660d44d648e27710d1f2132a/bec3cc64-1075-447d-bcb8-21aac0853b69/website-logo-large.png?format=500w" alt="Bay Technologies 灣區部落科技有限公司"></a>
     <nav>
       <div class="dd"><a href="index.html" class="top">Home</a></div>
@@ -107,7 +128,7 @@
       <div class="dd"><span class="top">Case Studies <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></span><div class="dd-menu"><a href="digital-campus.html">Digital Campus for Public University</a><a href="community-engagement-with-foodtrack.html">Community Engagement with Foodtrack</a><a href="learning-evaluation-management-system.html">Learning & Evaluation Management System</a></div></div>
       <div class="dd"><a href="blog.html" class="top">Blog</a></div>
     </nav>
-    <div class="hdr-right"><div class="lang-sw"><a href="index.html" class="on">EN</a><a href="home-tc.html" class="">繁</a><a href="home-tc-1.html" class="">简</a></div><a href="contact.html" class="contact-btn">Contact<span>|</span>聯絡<span>|</span>联系</a></div>
+    <div class="hdr-right"><div class="lang-sw"><a href="index.html" class="on">EN</a><a href="home-tc.html" class="">繁</a><a href="home-tc-1.html" class="">简</a></div><a href="contact.html" class="contact-btn">Contact<span>|</span>聯絡<span>|</span>联系</a><label for="navToggle" class="nav-burger" aria-label="Menu"><span></span><span></span><span></span></label></div>
   </div>
 </header>
 <main>
