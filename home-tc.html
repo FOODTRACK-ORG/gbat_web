@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>繁體中文 | 人工智能及大數據賦能教育與大健康 — Bay Technologies</title>
+<meta name="description" content="灣區部落科技有限公司專注運用人工智能及大數據，賦能教育與大健康。總部位於香港。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--blue:#5B84F5;--blue-deep:#3E68E0;--navy:#0E1A3A;--ink:#111827;--body:#4B5563;--muted:#6B7280;--line:#E5E9F2;--soft:#F6F8FD;--r:20px}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:Poppins,"PingFang HK","Noto Sans TC","Microsoft JhengHei",system-ui,sans-serif;color:var(--ink);font-weight:400;line-height:1.75;-webkit-font-smoothing:antialiased;background:#fff}
+  img{display:block;max-width:100%}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 32px}
+  h1,h2,h3{font-weight:600;letter-spacing:-.015em;line-height:1.2}
+  h2{font-size:clamp(28px,3.2vw,42px)}
+  p{color:var(--body);font-weight:300;font-size:17px}
+  .kicker{font-size:13px;font-weight:600;letter-spacing:.1em;color:var(--blue-deep);margin-bottom:14px;display:block}
+  .on-blue .kicker{color:rgba(255,255,255,.75)}
+  .btn{display:inline-flex;align-items:center;gap:10px;padding:14px 26px;border-radius:999px;background:var(--blue);color:#fff;font-weight:500;font-size:15px;transition:.2s;box-shadow:0 8px 20px -8px rgba(91,132,245,.7)}
+  .btn:hover{background:var(--blue-deep);transform:translateY(-1px)}
+  .btn svg{width:16px;height:16px}
+  header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.9);backdrop-filter:blur(14px) saturate(180%);border-bottom:1px solid transparent;transition:.2s}
+  header.scrolled{border-color:var(--line);box-shadow:0 4px 24px -16px rgba(14,26,58,.25)}
+  header .wrap{height:84px;display:flex;align-items:center;justify-content:space-between}
+  .logo img{height:46px;width:auto;max-width:200px}
+  nav{display:flex;gap:28px;font-size:15px;white-space:nowrap}
+  @media(max-width:1180px){nav{gap:22px;font-size:14px}}
+  nav .dd{position:relative}
+  nav .top{display:flex;align-items:center;gap:6px;color:#1f2937;position:relative;padding:6px 0;cursor:pointer}
+  nav .top svg{width:12px;height:12px;opacity:.55;transition:.2s}
+  nav .top::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2px;background:var(--blue);transform:scaleX(0);transition:.2s;transform-origin:left}
+  nav .dd:hover .top::after,nav .top.active::after{transform:scaleX(1)}
+  nav a.top.active::after{transform:scaleX(1)}
+  nav .dd:hover .top svg{transform:rotate(180deg)}
+  .dd-menu{position:absolute;top:calc(100% + 10px);left:-18px;min-width:290px;background:#fff;border:1px solid var(--line);border-radius:16px;padding:10px;box-shadow:0 24px 50px -24px rgba(14,26,58,.35);opacity:0;visibility:hidden;transform:translateY(6px);transition:.18s}
+  .dd:hover .dd-menu{opacity:1;visibility:visible;transform:none}
+  .dd-menu a{display:block;padding:10px 14px;border-radius:10px;font-size:14px;color:#1f2937}
+  .dd-menu a:hover{background:var(--soft);color:var(--blue-deep)}
+  .contact-btn{padding:12px 22px;border-radius:999px;background:var(--blue);color:#fff;font-weight:500;font-size:14px;transition:.2s;white-space:nowrap}
+  .contact-btn:hover{background:var(--blue-deep)}
+  .contact-btn span{opacity:.6;margin:0 6px}
+  .lang-sw{display:flex;gap:4px;font-size:13px;margin-right:16px}
+  .lang-sw a{padding:6px 10px;border-radius:999px;color:var(--muted)}
+  .lang-sw a.on{background:var(--soft);color:var(--ink);font-weight:500}
+  .hdr-right{display:flex;align-items:center}
+  @media(max-width:1320px){.lang-sw{display:none}}
+  @media(max-width:1000px){nav{display:none}}
+  html,body{overflow-x:hidden}
+  .hero{position:relative;min-height:600px;display:flex;align-items:center;color:#fff;overflow:hidden;background:#1b2b52}
+  .hero-bg{position:absolute;inset:0;background-size:cover;background-position:center;transform:scale(1.03)}
+  .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,20,48,.82) 0%,rgba(10,20,48,.55) 50%,rgba(10,20,48,.15) 100%)}
+  .hero .wrap{position:relative;z-index:2;width:100%}
+  .hero h1{font-size:clamp(34px,4.6vw,56px);font-weight:600;max-width:760px;line-height:1.3}
+  .hero-sub{margin-top:22px;font-size:17px;color:rgba(255,255,255,.82);max-width:560px;font-weight:300}
+  .hero-ctas{display:flex;gap:14px;margin-top:36px;flex-wrap:wrap}
+  .btn-outline{background:transparent;border:1px solid rgba(255,255,255,.5);box-shadow:none}
+  .btn-outline:hover{background:rgba(255,255,255,.1)}
+  .welcome{padding:100px 0}
+  .sec{padding:100px 0}
+  .sec p+p{margin-top:16px}
+  .split{display:grid;grid-template-columns:1.1fr .9fr;gap:70px;align-items:center}
+  .split.rev{grid-template-columns:.9fr 1.1fr}
+  @media(max-width:900px){.split,.split.rev{grid-template-columns:1fr;gap:40px}.split.rev .media{order:-1}}
+  .photo{border-radius:var(--r);overflow:hidden;box-shadow:0 40px 80px -40px rgba(14,26,58,.45);background:var(--soft)}
+  .photo img{width:100%;height:100%;object-fit:cover}
+  .on-blue{background:var(--blue);color:#fff}
+  .on-blue p{color:rgba(255,255,255,.88)}
+  .soft{background:var(--soft)}
+  .news{padding:90px 0;text-align:center}
+  .news-card{max-width:860px;margin:0 auto}
+  .news p{margin-top:12px}
+  form{display:grid;grid-template-columns:1fr 1fr 1.4fr auto;gap:12px;margin-top:34px}
+  input{font:inherit;font-size:15px;padding:15px 18px;border-radius:12px;border:1px solid transparent;background:#fff;color:var(--ink);outline:none;min-width:0;width:100%}
+  input:focus{box-shadow:0 0 0 4px rgba(255,255,255,.35)}
+  form button{font:inherit;cursor:pointer;border:none;padding:0 28px;border-radius:12px;background:var(--navy);color:#fff;font-weight:500;transition:.2s;width:100%}
+  form button:hover{background:#000}
+  .privacy{font-size:13px;margin-top:16px;color:rgba(255,255,255,.75);display:inline-flex;align-items:center;gap:8px}
+  .privacy svg{width:14px;height:14px}
+  .thanks{display:none;margin-top:28px;font-weight:500;font-size:18px}
+  @media(max-width:800px){form{grid-template-columns:1fr}form button{padding:15px}}
+  footer{background:var(--navy);color:#A5B0C8;padding:80px 0 34px;font-size:14px}
+  .fgrid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.3fr .8fr;gap:36px}
+  footer h4{color:#fff;font-size:14px;font-weight:600;margin-bottom:18px}
+  footer ul{list-style:none;display:grid;gap:11px}
+  footer a:hover{color:#fff}
+  .flogo{background:#fff;border-radius:12px;padding:10px 14px;display:inline-block}
+  .flogo img{height:36px;width:auto}
+  .fcontact li{display:flex;gap:10px;align-items:center}
+  .fcontact svg{width:16px;height:16px;flex:none;color:#7f9cf5}
+  .legal{margin-top:60px;padding-top:26px;border-top:1px solid rgba(255,255,255,.1);font-size:13px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+  @media(max-width:1000px){.fgrid{grid-template-columns:1fr 1fr}}
+  .rv{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+  .rv.in{opacity:1;transform:none}
+  @media(max-width:640px){.wrap{padding:0 22px}header .wrap{height:70px}.logo img{height:36px}.contact-btn{padding:10px 16px;font-size:13px}.sec,.welcome{padding:70px 0}.fgrid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header id="hdr">
+  <div class="wrap">
+    <a href="index.html" class="logo"><img src="https://images.squarespace-cdn.com/content/v1/660d44d648e27710d1f2132a/bec3cc64-1075-447d-bcb8-21aac0853b69/website-logo-large.png?format=500w" alt="Bay Technologies 灣區部落科技有限公司"></a>
+    <nav>
+      <div class="dd"><a href="index.html" class="top">Home</a></div>
+      <div class="dd"><span class="top">About <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></span><div class="dd-menu"><a href="about-the-company.html">Company</a><a href="partners.html">Partners</a><a href="sustainability.html">Sustainability</a></div></div>
+      <div class="dd"><span class="top">Products and Solutions <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></span><div class="dd-menu"><a href="foodtrack.html">FoodTrack - Eat Healthy</a><a href="intelligent-education.html">Intelligent Education</a></div></div>
+      <div class="dd"><span class="top">Case Studies <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></span><div class="dd-menu"><a href="digital-campus.html">Digital Campus for Public University</a><a href="community-engagement-with-foodtrack.html">Community Engagement with Foodtrack</a><a href="learning-evaluation-management-system.html">Learning & Evaluation Management System</a></div></div>
+      <div class="dd"><a href="blog.html" class="top">Blog</a></div>
+    </nav>
+    <div class="hdr-right"><div class="lang-sw"><a href="index.html" class="">EN</a><a href="home-tc.html" class="on">繁</a><a href="home-tc-1.html" class="">简</a></div><a href="contact.html" class="contact-btn">Contact<span>|</span>聯絡<span>|</span>联系</a></div>
+  </div>
+</header>
+<main>
+<section class="hero">
+  <div class="hero-bg" style="background-image:url('https://images.squarespace-cdn.com/content/v1/660d44d648e27710d1f2132a/bd6779db-a3d1-4ef8-865b-ef8ee02df84f/pexels-jimmy-chan-3988297.jpg?format=2500w')"></div>
+  <div class="wrap">
+    <div>
+      <h1>專注運用人工智能及大數據<br>賦能教育與大健康</h1>
+      <p class="hero-sub">透過兩大旗艦產品系列，我們正在改變健康管理與教育的未來。</p>
+      <div class="hero-ctas">
+        <a href="contact.html" class="btn">聯絡我們 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="welcome">
+  <div class="wrap">
+    <span class="kicker rv">公司簡介</span>
+    <h2 class="rv" style="margin-bottom:28px">我們是一家以大灣區（GBA）為根基的人工智能科技公司</h2>
+    <div class="split">
+      <div class="rv">
+        <p>我們專注於教育與大健康兩大領域。我們的智能校園管理系統及教學產品已於超過 <strong>280</strong> 所學校投入使用。</p>
+        <p>在健康領域，我們結合傳統中醫智慧與舌面影像分析技術，為用戶提供個性化健康建議，並建立開放式健康生態系統。</p>
+        <p>衷心感謝香港科技園公司（HKSTP）及香港理工大學知識轉移處對我們的大力支持。</p>
+        <div style="margin-top:30px"><a href="contact.html" class="btn">聯絡我們 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+      </div>
+      <div class="photo rv" style="aspect-ratio:4/4.6"><img src="https://images.squarespace-cdn.com/content/v1/660d44d648e27710d1f2132a/34a1f91c-cdb1-415c-8650-b8bbc80dbac8/food+track+intro.png?format=1000w" alt="FoodTrack 應用程式"></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec soft">
+  <div class="wrap split">
+    <div class="rv">
+      <span class="kicker">智能校園管理</span>
+      <h2>智能校園管理</h2>
+      <p>一套涵蓋日常行政、家校溝通、出勤管理、校園安全、課表編排、學生成績分析、教師考勤及課堂巡查的 SaaS 校園管理系統，並配備獎勵機制與數字化儀表板。</p>
+      <div style="margin-top:30px"><a href="contact.html" class="btn">聯絡我們試用 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+    </div>
+    <div class="photo media rv" style="aspect-ratio:4/3"><img src="https://images.squarespace-cdn.com/content/v1/660d44d648e27710d1f2132a/cd251c59-5321-43e2-bc98-2a94efc46162/Intelligent+school?format=1000w" alt="智能校園管理"></div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap split rev">
+    <div class="photo media rv" style="aspect-ratio:4/3"><img src="https://images.squarespace-cdn.com/content/v1/660d44d648e27710d1f2132a/7c46e1c4-31f5-4de3-bcc5-fc0ad5d4b0b7/02.jpg?format=1000w" alt="AI 賦能教與學"></div>
+    <div class="rv">
+      <span class="kicker">AI賦能教與學</span>
+      <h2>AI 賦能教與學</h2>
+      <p>我們的 AI 將教師從繁瑣的日常工作中釋放出來，讓他們能夠專注於更多學生；同時透過診斷每位學生的知識結構與能力水平，讓個性化學習成為可能。</p>
+      <div style="margin-top:30px"><a href="contact.html" class="btn">聯絡我們試用 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec on-blue">
+  <div class="wrap split">
+    <div class="rv">
+      <span class="kicker">FoodTrack：智慧健康飲食管理平台</span>
+      <h2>FoodTrack：智慧健康飲食管理平台</h2>
+      <p>用戶只需拍攝舌面及面部相片，並回答互動問題，即可生成健康檔案並獲得個性化飲食建議。系統能從相片中識別食物，精確計算卡路里、蛋白質、脂肪、碳水化合物、膽固醇、嘌呤及糖份等營養數據。</p>
+      <p>FoodTrack 更推出專屬虛擬寵物，以生動的 3D 動畫將健康數據轉化為有趣的視覺體驗，並支援與穿戴式裝置及健身應用程式整合。</p>
+      <div style="margin-top:30px"><a href="contact.html" class="btn">聯絡我們加入 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+    </div>
+    <div class="photo media rv" style="aspect-ratio:4/3"><img src="https://images.squarespace-cdn.com/content/v1/660d44d648e27710d1f2132a/fc3c1332-54a0-47bc-931d-52d0cc4980c5/Screenshot+2025-10-03+at+5.11.59%E2%80%AFPM.png?format=1000w" alt="FoodTrack"></div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap split">
+    <div class="rv">
+      <span class="kicker">定制化解決方案</span>
+      <h2>定制化解決方案</h2>
+      <p>灣區部落的團隊緊密地與教育及健康行業的客戶合作，共同設計切合其特定需求的專屬解決方案。</p>
+      <div style="margin-top:30px"><a href="contact.html" class="btn">獲取方案及報價 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+    </div>
+    <div class="photo media rv" style="aspect-ratio:4/3"><img src="https://images.squarespace-cdn.com/content/v1/660d44d648e27710d1f2132a/25332f7c-666c-4667-b76b-624f68b84a50/custom+solution+meeting.jpg?format=1000w" alt="定制化解決方案"></div>
+  </div>
+</section>
+
+<section class="on-blue news">
+  <div class="wrap news-card">
+    <h2>訂閱最新消息</h2>
+    <p>留下您的郵箱以收到我們最新的消息。</p>
+    <form onsubmit="event.preventDefault();this.style.display='none';this.nextElementSibling.style.display='block'">
+      <input placeholder="First Name" aria-label="First Name">
+      <input placeholder="Last Name" aria-label="Last Name">
+      <input type="email" placeholder="Email Address" aria-label="Email Address" required>
+      <button type="submit">訂閱</button>
+    </form>
+    <div class="thanks">Thank you!</div>
+    <div class="privacy"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 018 0v4"/></svg>我們非常重視您的私隱。</div>
+  </div>
+</section>
+
+</main>
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <span class="flogo"><img src="https://images.squarespace-cdn.com/content/v1/660d44d648e27710d1f2132a/7dcf297a-5ffa-45eb-859d-a3f3f63d08e5/website-logo-large.png?format=500w" alt="Bay Technologies"></span>
+        <p style="color:#A5B0C8;font-size:14px;margin-top:18px;max-width:260px">Empower Wellness &amp; Education with AI, Big Data &amp; IoT.</p>
+      </div>
+      <div><h4>About</h4><ul><li><a href="about-the-company.html">Company</a></li><li><a href="partners.html">Partners</a></li><li><a href="sustainability.html">Sustainability</a></li></ul></div>
+      <div><h4>Products and Solutions</h4><ul><li><a href="foodtrack.html">FoodTrack - Eat Healthy</a></li><li><a href="intelligent-education.html">Intelligent Education</a></li></ul></div>
+      <div><h4>Case Studies</h4><ul><li><a href="digital-campus.html">Digital Campus for Public University</a></li><li><a href="community-engagement-with-foodtrack.html">Community Engagement with Foodtrack</a></li><li><a href="learning-evaluation-management-system.html">Learning &amp; Evaluation Management System</a></li></ul></div>
+      <div><h4>Languages</h4><ul><li><a href="index.html">English</a></li><li><a href="home-tc.html">繁體中文</a></li><li><a href="home-tc-1.html">简体中文</a></li></ul></div>
+    </div>
+    <div style="margin-top:44px">
+      <h4 style="color:#fff;font-size:14px;margin-bottom:14px">Contact｜聯絡方式｜联系方式</h4>
+      <ul class="fcontact" style="display:flex;gap:32px;flex-wrap:wrap;list-style:none">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 6l10 7 10-7"/></svg><a href="mailto:info@gbat.ai">info@gbat.ai</a></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1.9.4 1.8.7 2.7a2 2 0 01-.5 2.1L8 9.8a16 16 0 006 6l1.3-1.3a2 2 0 012.1-.4c.9.3 1.8.6 2.7.7a2 2 0 011.7 2z"/></svg><a href="tel:+85246812720">+852 4681 2720</a></li>
+      </ul>
+    </div>
+    <div class="legal">
+      <span>©Bay Technologies Limited. All rights reserved.</span>
+      <span>版權所有©灣區部落科技有限公司 ｜ 版权所有©湾区部落科技有限公司</span>
+    </div>
+  </div>
+</footer>
+<script>
+  const h=document.getElementById('hdr');
+  addEventListener('scroll',()=>h.classList.toggle('scrolled',scrollY>10),{passive:true});
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+  document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+  setTimeout(()=>document.querySelectorAll('.rv').forEach(el=>el.classList.add('in')),2500);
+</script>
+</body>
+</html>
