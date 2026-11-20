@@ -40,14 +40,6 @@
   .dd:hover .dd-menu{opacity:1;visibility:visible;transform:none}
   .dd-menu a{display:block;padding:10px 14px;border-radius:10px;font-size:14px;color:#1f2937}
   .dd-menu a:hover{background:var(--soft);color:var(--blue-deep)}
-  .contact-btn{padding:12px 22px;border-radius:999px;background:var(--blue);color:#fff;font-weight:500;font-size:14px;transition:.2s;white-space:nowrap}
-  .contact-btn:hover{background:var(--blue-deep)}
-  .contact-btn span{opacity:.6;margin:0 6px}
-  .lang-sw{display:flex;gap:4px;font-size:13px;margin-right:16px}
-  .lang-sw a{padding:6px 10px;border-radius:999px;color:var(--muted)}
-  .lang-sw a.on{background:var(--soft);color:var(--ink);font-weight:500}
-  .hdr-right{display:flex;align-items:center}
-  @media(max-width:1320px){.lang-sw{display:none}}
   @media(max-width:1000px){nav{display:none}}
   html,body{overflow-x:hidden}
   .hero{position:relative;min-height:600px;display:flex;align-items:center;color:#fff;overflow:hidden;background:#1b2b52}
@@ -95,7 +87,7 @@
   @media(max-width:1000px){.fgrid{grid-template-columns:1fr 1fr}}
   .rv{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
   .rv.in{opacity:1;transform:none}
-  @media(max-width:640px){.wrap{padding:0 22px}header .wrap{height:70px}.logo img{height:36px}.contact-btn{padding:10px 16px;font-size:13px}.sec,.welcome{padding:70px 0}.fgrid{grid-template-columns:1fr}}
+  @media(max-width:640px){.wrap{padding:0 22px}header .wrap{height:70px}.logo img{height:36px}.sec,.welcome{padding:70px 0}.fgrid{grid-template-columns:1fr}}
 
   /* Mobile nav */
   .nav-toggle{display:none}
@@ -112,10 +104,24 @@
     nav .top svg{transform:rotate(-90deg)}
     .dd-menu{position:static;opacity:1;visibility:visible;transform:none;box-shadow:none;border:none;min-width:0;padding:0 0 14px 6px}
     .dd-menu a{padding:8px 6px;font-size:14.5px}
-    #navToggle:checked ~ .hdr-right .nav-burger span:nth-child(1){transform:translateY(7px) rotate(45deg)}
-    #navToggle:checked ~ .hdr-right .nav-burger span:nth-child(2){opacity:0}
-    #navToggle:checked ~ .hdr-right .nav-burger span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+    #navToggle:checked ~ .nav-group .nav-burger span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+    #navToggle:checked ~ .nav-group .nav-burger span:nth-child(2){opacity:0}
+    #navToggle:checked ~ .nav-group .nav-burger span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
   }
+
+  /* Nav group + language switcher */
+  .nav-group{display:flex;align-items:center;gap:18px}
+  .lang-dd{position:relative;display:flex;align-items:center}
+  .lang-top{display:flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:999px;border:none;background:none;color:#1f2937;cursor:pointer}
+  .lang-top:hover{background:var(--soft)}
+  .lang-top svg{width:19px;height:19px}
+  .lang-menu{position:absolute;top:calc(100% + 10px);right:-6px;min-width:150px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:8px;box-shadow:0 24px 50px -24px rgba(14,26,58,.35);opacity:0;visibility:hidden;transform:translateY(6px);transition:.18s}
+  .lang-menu::before{content:"";position:absolute;right:0;left:0;top:-12px;height:12px}
+  .lang-dd:hover .lang-menu,.lang-dd:focus-within .lang-menu{opacity:1;visibility:visible;transform:none}
+  .lang-menu a{display:block;padding:9px 12px;border-radius:9px;font-size:14px;color:#1f2937}
+  .lang-menu a:hover{background:var(--soft);color:var(--blue-deep)}
+  .lang-menu a.on{color:var(--blue-deep);font-weight:500}
+  @media(max-width:1000px){.nav-group{gap:10px}.lang-top{width:34px;height:34px}.lang-top svg{width:17px;height:17px}}
 </style>
 </head>
 <body>
@@ -123,14 +129,21 @@
   <div class="wrap">
     <input type="checkbox" id="navToggle" class="nav-toggle">
     <a href="index.html" class="logo"><img src="https://images.squarespace-cdn.com/content/v1/660d44d648e27710d1f2132a/bec3cc64-1075-447d-bcb8-21aac0853b69/website-logo-large.png?format=500w" alt="Bay Technologies 灣區部落科技有限公司"></a>
+    <div class="nav-group">
     <nav>
       <div class="dd"><a href="index.html" class="top">Home</a></div>
       <div class="dd"><span class="top">About <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></span><div class="dd-menu"><a href="about-the-company.html">Company</a><a href="partners.html">Partners</a><a href="sustainability.html">Sustainability</a></div></div>
       <div class="dd"><span class="top">Products and Solutions <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></span><div class="dd-menu"><a href="foodtrack.html">FoodTrack - Eat Healthy</a><a href="intelligent-education.html">Intelligent Education</a></div></div>
       <div class="dd"><span class="top">Case Studies <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></span><div class="dd-menu"><a href="digital-campus.html">Digital Campus for Public University</a><a href="community-engagement-with-foodtrack.html">Community Engagement with Foodtrack</a><a href="learning-evaluation-management-system.html">Learning & Evaluation Management System</a></div></div>
       <div class="dd"><a href="blog.html" class="top">Blog</a></div>
+          <div class="dd"><a href="contact.html" class="top">Contact</a></div>
     </nav>
-    <div class="hdr-right"><div class="lang-sw"><a href="index.html" class="">EN</a><a href="home-tc.html" class="on">繁</a><a href="home-tc-1.html" class="">简</a></div><a href="contact.html" class="contact-btn">Contact<span>|</span>聯絡<span>|</span>联系</a><label for="navToggle" class="nav-burger" aria-label="Menu"><span></span><span></span><span></span></label></div>
+    <div class="lang-dd">
+      <button type="button" class="lang-top" aria-label="Language"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3c2.6 2.6 4 6 4 9s-1.4 6.4-4 9c-2.6-2.6-4-6-4-9s1.4-6.4 4-9z"/></svg></button>
+      <div class="lang-menu"><a href="index.html" class="">English</a><a href="home-tc.html" class="on">繁體中文</a><a href="home-tc-1.html" class="">简体中文</a></div>
+    </div>
+    <label for="navToggle" class="nav-burger" aria-label="Menu"><span></span><span></span><span></span></label>
+  </div>
   </div>
 </header>
 <main>
