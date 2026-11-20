@@ -121,6 +121,19 @@
   .lang-menu a.on{color:var(--blue-deep);font-weight:500}
   .lang-menu{min-width:190px}
   @media(max-width:1000px){.nav-group{gap:10px}.lang-top{width:34px;height:34px}.lang-top svg{width:17px;height:17px}}
+
+  /* Footer language switcher */
+  .footer-lang-dd{position:relative;display:inline-flex}
+  .footer-lang-top{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border-radius:999px;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.06);color:#fff;font-size:14px;font:inherit;cursor:pointer}
+  .footer-lang-top:hover{background:rgba(255,255,255,.12)}
+  .footer-lang-top svg{width:17px;height:17px;flex:none}
+  .footer-lang-top .chev{width:10px;height:10px;opacity:.6;transition:.2s}
+  .footer-lang-dd:hover .footer-lang-top .chev,.footer-lang-dd:focus-within .footer-lang-top .chev{transform:rotate(180deg)}
+  .footer-lang-menu{position:absolute;bottom:calc(100% + 10px);left:0;min-width:190px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:8px;box-shadow:0 24px 50px -24px rgba(0,0,0,.5);opacity:0;visibility:hidden;transform:translateY(6px);transition:.18s}
+  .footer-lang-dd:hover .footer-lang-menu,.footer-lang-dd:focus-within .footer-lang-menu{opacity:1;visibility:visible;transform:none}
+  .footer-lang-menu a{display:block;padding:9px 12px;border-radius:9px;font-size:14px;color:#1f2937}
+  .footer-lang-menu a:hover{background:var(--soft);color:var(--blue-deep)}
+  .footer-lang-menu a.on{color:var(--blue-deep);font-weight:500}
 </style>
 </head>
 <body>
@@ -208,7 +221,7 @@
       <div><h4>About</h4><ul><li><a href="about-the-company.html">Company</a></li><li><a href="partners.html">Partners</a></li><li><a href="sustainability.html">Sustainability</a></li></ul></div>
       <div><h4>Products and Solutions</h4><ul><li><a href="foodtrack.html">FoodTrack - Eat Healthy</a></li><li><a href="intelligent-education.html">Intelligent Education</a></li></ul></div>
       <div><h4>Case Studies</h4><ul><li><a href="digital-campus.html">Digital Campus for Public University</a></li><li><a href="community-engagement-with-foodtrack.html">Community Engagement with Foodtrack</a></li><li><a href="learning-evaluation-management-system.html">Learning &amp; Evaluation Management System</a></li></ul></div>
-      <div><h4>Languages</h4><ul><li><a href="index.html">English</a></li><li><a href="home-tc.html">繁體中文</a></li><li><a href="home-tc-1.html">简体中文</a></li><li><a href="home-es.html">Español</a></li><li><a href="home-fr.html">Français</a></li><li><a href="home-ja.html">日本語</a></li><li><a href="home-ko.html">한국어</a></li><li><a href="home-pl.html">Polski</a></li></ul></div>
+      <div><h4>Language</h4><div class="footer-lang-dd"><button type="button" class="footer-lang-top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3c2.6 2.6 4 6 4 9s-1.4 6.4-4 9c-2.6-2.6-4-6-4-9s1.4-6.4 4-9z"/></svg><span>English</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button><div class="footer-lang-menu"><a href="index.html" class="">English</a><a href="home-tc.html" class="">繁體中文</a><a href="home-tc-1.html" class="">简体中文</a><a href="home-es.html" class="">Español</a><a href="home-fr.html" class="">Français</a><a href="home-ja.html" class="">日本語</a><a href="home-ko.html" class="">한국어</a><a href="home-pl.html" class="">Polski</a></div></div></div>
     </div>
     <div style="margin-top:44px">
       <h4 style="color:#fff;font-size:14px;margin-bottom:14px">Contact</h4>
